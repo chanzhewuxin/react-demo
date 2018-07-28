@@ -30,6 +30,7 @@ export default class Welcome extends React.Component {
     render() {
         return <h1>Hello,
             <button onClick={() => this.clickCallback()}>click</button>
+ 
         </h1>;
     }
 }
