@@ -3,10 +3,22 @@ import React from "react";
 export default class Demo3 extends React.Component {
 
     constructor(props) {
-
+        this.state = {
+            name: ''
+        }
     }
 
-    render(){
-        return <div>组件的生命周期</div>;
+    inputChange() {
+        console.log(arguments);
+        this.setState((prevState, props) => {
+            return prevState;
+        })
+    }
+
+    render() {
+        let { name } = this.state;
+        return <div>
+            <input type='text' defaultValue={10} value={name} onChange={() => this.inputChange()} />
+        </div>;
     }
 }

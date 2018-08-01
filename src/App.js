@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './demo1';
+import demo3 from './demo3';
 
 class App extends Component {
   render() {
@@ -15,7 +16,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <Welcome/>
+        <Welcome />
+        <demo3 />
       </div>
     );
   }
