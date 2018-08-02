@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './demo1';
-import demo3 from './demo3';
+import Demo3 from './demo3';
+import { CombineComponent, CombineComponentChild } from "./CombineComponent";
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -17,7 +19,12 @@ class App extends Component {
         </p>
 
         <Welcome />
-        <demo3 />
+        <Demo3 />
+
+        <CombineComponent left={<div><span>左边内容</span></div>} right={<span>右边内容</span>} />
+        <CombineComponentChild>
+          <div><span style={{ color: 'red' }}>子内容</span></div>
+        </CombineComponentChild>
       </div>
     );
   }
